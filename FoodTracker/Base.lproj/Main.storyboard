@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="snK-pV-92Q">
-                                <rect key="frame" x="20" y="80" width="560" height="657"/>
+                                <rect key="frame" x="20" y="80" width="560" height="713"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-yy-ukG">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="21"/>
@@ -43,7 +43,7 @@
                                             <action selector="setDefaultTextLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="220-Sv-xNk"/>
                                         </connections>
                                     </button>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="ZEu-IF-8bX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="ZEu-IF-8bX">
                                         <rect key="frame" x="0.0" y="117" width="540" height="540"/>
                                         <animations/>
                                         <gestureRecognizers/>
@@ -54,6 +54,11 @@
                                             <outletCollection property="gestureRecognizers" destination="nFc-vk-tEo" appends="YES" id="EIt-T2-C8g"/>
                                         </connections>
                                     </imageView>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="mhC-zm-IY6" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="669" width="240" height="44"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <animations/>
                                 <constraints>
@@ -77,11 +82,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="nFc-vk-tEo">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="Nvg-dk-2L6"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="nFc-vk-tEo"/>
             </objects>
             <point key="canvasLocation" x="325" y="377"/>
         </scene>
